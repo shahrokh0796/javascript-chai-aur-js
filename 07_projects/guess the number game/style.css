@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    min-block-size: 100%;
+    block-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: rgb(14, 13, 13);
+    background-color:  rgb(46, 42, 42);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+#wrapper {
+    background-color: rgb(77, 75, 75);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    padding-block: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+input[type="text"] {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+input[type="submit"] {
+    padding-inline: 1.5rem;
+    margin-block: 2rem;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    transition: background-color 0.700s ease;
+}
+input[type="submit"]:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+#newGame {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
