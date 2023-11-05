@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    min-block-size: 100%;
+    block-size: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: rgb(14, 13, 13);
+    background-color:  rgb(46, 42, 42);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#clock {
+  font-size: 40px;
+  background-color: orange;
+  padding: 20px 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+
+
+
+
