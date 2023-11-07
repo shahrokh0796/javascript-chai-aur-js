@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request</title>
+    <style>
+        body {
+            background-color: #212121;
+            color:aliceblue;
+        }
+
+        section {
+          block-size: 23rem;
+          inline-size: 13rem;
+          border: 1px solid black;
+        }
+
+        img {
+          inline-size: 5rem;
+          block-size:5rem;
+          border: 2px solid #fff;
+          border-radius: 50%;
+          display: block;
+          margin-inline: auto;
+          margin-block-start: 3rem;
+        }
+
+        h1 {
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+  <button id="button" type="button">Show User</button>
+  <div id="container"></div>
+    
+
+    <script>
+        // if you want to run this api request copy the whole -
+        // code and run it on you vs code because this is
+        // node.js environment 
+      const userCard = document.getElementById("container");
+        // read AJAX from MDN about state
+        const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", requestUrl);
+        xhr.onreadystatechange = function () {
+          console.log(xhr.readyState);
+          if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText);
+            // console.log(typeof data);
+            console.log(data);
+            document.getElementById("button")
+            .addEventListener("click", function(){
+              userCard.innerHTML = `<section>
+              <article>
+                <img src=${data.avatar_url} alt="">
+              </article>
+
+              <h1>followers ${data.followers}</h1>
+            </section>`;
+            });
+          }
+        }
+        // xhr.send() is used to call 
+        xhr.send();
+        // console.log(xhr.readyState);
+    </script>
+</body>
+</html>
