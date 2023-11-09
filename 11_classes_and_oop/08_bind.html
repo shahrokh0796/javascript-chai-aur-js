@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bind</title>
+</head>
+<body>
+  <button>Button clicked</button>
+  <!-- open it in the browser of your local machine
+    if, the machine in here does not open this  on the browser -->
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:3000";
+        // requirement
+
+
+        document.querySelector("button")
+        .addEventListener("click", this.handleClick.bind(this));
+      }
+ 
+      handleClick() {
+        console.log("Button clicked");
+        console.log(this.server);
+      }
+    }
+    const App = new React();
+  </script>
+</body>
+</html>
